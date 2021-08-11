@@ -229,5 +229,23 @@ namespace LabCRUD
         {
             CargarEstadoEmpresa();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        void LimpiarCampos()
+        {
+            txtCorreo.Clear();
+            txtNombreEmpresa.Clear();
+            txtNit.Clear();
+            txtDireccion.Clear();
+            txtRepresentante.Clear();
+            cmbEstadoEmpresa.SelectedIndex = 0;
+            cmbTipoEmpresa.SelectedIndex = 0;
+            textBox2.Clear();
+            
+        }
     }
 }
