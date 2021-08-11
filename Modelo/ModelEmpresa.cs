@@ -45,5 +45,25 @@ namespace Modelo
                 return data = null;
             }
         }
+
+        //empresa correo  nit representante_legal id_tipo_empresa id_estado   direccion logoempresa
+        #region CRUD
+        public static bool AgregarEmpresa(string nombreE, string correo, string nit, string nombreRe, int idTipo, int idEstado, string direccion)
+        {
+            bool res = false;
+            try
+            {
+                MySqlCommand cmandquery = new MySqlCommand(string.Format("INSERT INTO tbempresa(empresa, correo, nit, representante_legal,id_tipo_empresa, id_estado, direccion) VALUES('{0}','{1}','{2}','{3}','{4}','{5}', '{6}')", nombreE, correo, nit, nombreRe, idTipo, idEstado, direccion), ModeloConexion.ObtenerConexion());
+                res = Convert.ToBoolean(cmandquery.ExecuteNonQuery());
+                return res;
+            }
+            catch (Exception)
+            {
+                return res;
+            }
+
+        }
+
+        #endregion
     }
 }

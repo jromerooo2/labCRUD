@@ -20,6 +20,7 @@ namespace LabCRUD
         }
 
         public DataTable datosEmpresas;
+        public ControladorEmpresa empresa;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -62,15 +63,42 @@ namespace LabCRUD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nombreEmpresa, nombreRepresentante, nit, correoContacto, direccionEmpresa;
-            int idTipoEmpresa, idEstadoEmpresa;
-            nombreEmpresa = txtNombreEmpresa.Text;
-            nit = txtNit.Text;
-            idTipoEmpresa = Convert.ToInt16(cmbTipoEmpresa.SelectedValue);
-            idEstadoEmpresa = Convert.ToInt16(cmbEstadoEmpresa.SelectedValue);
-            direccionEmpresa = txtDireccion.Text;
-            correoContacto = txtCorreo.Text;
-            nombreRepresentante = txtRepresentante.Text;
+            EnviarDatos();
+        }
+
+        void EnviarDatos()
+        {
+            try
+            {
+                string nombreEmpresa, nombreRepresentante, nit, correoContacto, direccionEmpresa;
+                int idTipoEmpresa, idEstadoEmpresa;
+                nombreEmpresa = txtNombreEmpresa.Text;
+                nit = txtNit.Text;
+                idTipoEmpresa = Convert.ToInt16(cmbTipoEmpresa.SelectedValue);
+                idEstadoEmpresa = Convert.ToInt16(cmbEstadoEmpresa.SelectedValue);
+                direccionEmpresa = txtDireccion.Text;
+                correoContacto = txtCorreo.Text;
+                nombreRepresentante = txtRepresentante.Text;
+
+                empresa = new ControladorEmpresa(nombreEmpresa, nombreRepresentante, nit, direccionEmpresa, correoContacto, idTipoEmpresa, idEstadoEmpresa);
+                bool res = empresa.AgregarEmpresa();
+                if (res)
+                {
+                    MessageBox.Show("Empresa registrada exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Oops!, ocurrió un error al registrar la empresa, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
