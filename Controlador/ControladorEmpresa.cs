@@ -20,6 +20,11 @@ namespace Controlador
             return ModelEmpresa.CargarTipoEmpresa();
         }
 
+        public static DataTable CargarEmpresas_Controller()
+        {
+            return ModelEmpresa.CargarListaEmpresas();
+        }
+
         //atributos empresa
         public static int idempresa { get; set; }
         public static string nombreEmpresa { get; set; }

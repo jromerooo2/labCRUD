@@ -28,6 +28,24 @@ namespace Modelo
             }
         }
 
+        public static DataTable CargarListaEmpresas()
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tbempresa";
+                MySqlCommand cmdEstadoEmpresa = new MySqlCommand(string.Format(instruccion), ModeloConexion.ObtenerConexion());
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdEstadoEmpresa);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
         public static DataTable CargarEstadoEmpresa()
         {
             DataTable data;

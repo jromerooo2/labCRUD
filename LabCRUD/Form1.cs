@@ -18,6 +18,7 @@ namespace LabCRUD
         {
             InitializeComponent();
             CargarDatos();
+            CargarGridDatos();
         }
 
         public DataTable datosEmpresas;
@@ -94,8 +95,8 @@ namespace LabCRUD
 
         void CargarGridDatos()
         {
-            //datosEmpresas = EmpleadosController.CargarEmpleados_Controller();
-            //dgvEmpleados.DataSource = datosEmpresas;
+            datosEmpresas = ControladorEmpresa.CargarEmpresas_Controller();
+            dgvEmpresas.DataSource = datosEmpresas;
         }
 
         private void btnConectar_Click(object sender, EventArgs e)
@@ -170,5 +171,11 @@ namespace LabCRUD
                 MessageBox.Show("Error al establecer conexión.");
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
