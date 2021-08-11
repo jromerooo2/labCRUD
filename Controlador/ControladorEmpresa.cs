@@ -25,6 +25,16 @@ namespace Controlador
             return ModelEmpresa.CargarListaEmpresas();
         }
 
+        public static object CargarTipoEmpresaInnerJoin(string id)
+        {
+            return ModelEmpresa.CargarTipoEmpresaInner(id);
+        }
+        public static object CargarEstadoEmpresaInnerJoin(string id)
+        {
+            return ModelEmpresa.CargarTipoEstadoInner( id);
+        }
+
+
         //atributos empresa
         public static int idempresa { get; set; }
         public static string nombreEmpresa { get; set; }

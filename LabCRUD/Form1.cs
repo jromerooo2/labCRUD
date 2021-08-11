@@ -116,6 +116,7 @@ namespace LabCRUD
         private void button1_Click(object sender, EventArgs e)
         {
             EnviarDatos();
+            CargarGridDatos();
         }
 
         void EnviarDatos()
@@ -205,7 +206,39 @@ namespace LabCRUD
             txtId.Text = dgvEmpresas[0, i].Value.ToString();
             txtNombreEmpresa.Text = dgvEmpresas[1, i].Value.ToString();
             txtCorreo.Text = dgvEmpresas[2, i].Value.ToString();
+            txtNit.Text = dgvEmpresas[3, i].Value.ToString();
+            txtRepresentante.Text = dgvEmpresas[4, i].Value.ToString();
+            txtDireccion.Text = dgvEmpresas[7, i].Value.ToString();
 
+            string idTipoEmpresa = dgvEmpresas[5, i].Value.ToString();
+            cmbTipoEmpresa.DataSource = ControladorEmpresa.CargarTipoEmpresaInnerJoin(idTipoEmpresa);
+            cmbTipoEmpresa.DisplayMember = "tipo_empresa";
+            cmbTipoEmpresa.ValueMember = "id_tipo_empresa";
+
+            string idEstado = dgvEmpresas[6, i].Value.ToString();
+            cmbEstadoEmpresa.DataSource = ControladorEmpresa.CargarEstadoEmpresaInnerJoin(idEstado);
+            cmbEstadoEmpresa.DisplayMember = "estado";
+            cmbEstadoEmpresa.ValueMember = "id_estado";
+        }
+
+        private void cmbTipoEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarTipoEmpresa();
+        }
+
+        private void cmbEstadoEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarEstadoEmpresa();
+        }
+
+        private void cmbTipoEmpresa_Click(object sender, EventArgs e)
+        {
+            CargarTipoEmpresa();
+        }
+
+        private void cmbEstadoEmpresa_Click(object sender, EventArgs e)
+        {
+            CargarEstadoEmpresa();
         }
     }
 }

@@ -28,6 +28,44 @@ namespace Modelo
             }
         }
 
+        public static object CargarTipoEstadoInner(string id)
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tbestado WHERE estado = ?param1";
+                MySqlCommand cmdtipodoc = new MySqlCommand(string.Format(instruccion), ModeloConexion.ObtenerConexion());
+                cmdtipodoc.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipodoc);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
+        public static object CargarTipoEmpresaInner(string id)
+        {
+            DataTable data;
+            try
+            {
+                string instruccion = "SELECT * FROM tbtipo_empresa WHERE tipo_empresa = ?param1";
+                MySqlCommand cmdtipodoc = new MySqlCommand(string.Format(instruccion), ModeloConexion.ObtenerConexion());
+                cmdtipodoc.Parameters.Add(new MySqlParameter("param1", id));
+                MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipodoc);
+                data = new DataTable();
+                adp.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data = null;
+            }
+        }
+
         public static DataTable CargarListaEmpresas()
         {
             DataTable data;

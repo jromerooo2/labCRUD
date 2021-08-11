@@ -67,7 +67,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 25.2F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(397, 27);
+            this.label1.Location = new System.Drawing.Point(578, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(453, 49);
             this.label1.TabIndex = 0;
@@ -76,7 +76,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(868, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1169, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(85, 78);
@@ -142,6 +142,8 @@
             this.cmbEstadoEmpresa.Name = "cmbEstadoEmpresa";
             this.cmbEstadoEmpresa.Size = new System.Drawing.Size(193, 24);
             this.cmbEstadoEmpresa.TabIndex = 23;
+            this.cmbEstadoEmpresa.SelectedIndexChanged += new System.EventHandler(this.cmbEstadoEmpresa_SelectedIndexChanged);
+            this.cmbEstadoEmpresa.Click += new System.EventHandler(this.cmbEstadoEmpresa_Click);
             // 
             // label10
             // 
@@ -162,6 +164,8 @@
             this.cmbTipoEmpresa.Name = "cmbTipoEmpresa";
             this.cmbTipoEmpresa.Size = new System.Drawing.Size(193, 24);
             this.cmbTipoEmpresa.TabIndex = 21;
+            this.cmbTipoEmpresa.SelectedIndexChanged += new System.EventHandler(this.cmbTipoEmpresa_SelectedIndexChanged);
+            this.cmbTipoEmpresa.Click += new System.EventHandler(this.cmbTipoEmpresa_Click);
             // 
             // label8
             // 
@@ -303,7 +307,7 @@
             this.dgvEmpresas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvEmpresas.Name = "dgvEmpresas";
             this.dgvEmpresas.RowTemplate.Height = 24;
-            this.dgvEmpresas.Size = new System.Drawing.Size(827, 274);
+            this.dgvEmpresas.Size = new System.Drawing.Size(1187, 274);
             this.dgvEmpresas.TabIndex = 4;
             this.dgvEmpresas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresas_CellClick);
             this.dgvEmpresas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -349,7 +353,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(1157, 142);
+            this.btnEliminar.Location = new System.Drawing.Point(1352, 139);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(141, 59);
@@ -360,6 +364,7 @@
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(344, 18);
             this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
@@ -371,7 +376,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(65)))), ((int)(((byte)(86)))));
-            this.ClientSize = new System.Drawing.Size(1313, 510);
+            this.ClientSize = new System.Drawing.Size(1674, 510);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.pictureBox2);
