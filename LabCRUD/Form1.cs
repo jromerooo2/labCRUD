@@ -18,6 +18,7 @@ namespace LabCRUD
         {
             InitializeComponent();
             CargarDatos();
+            CargarGridDatos();
         }
 
         public DataTable datosEmpresas;
@@ -94,8 +95,8 @@ namespace LabCRUD
 
         void CargarGridDatos()
         {
-            //datosEmpresas = EmpleadosController.CargarEmpleados_Controller();
-            //dgvEmpleados.DataSource = datosEmpresas;
+            datosEmpresas = ControladorEmpresa.CargarEmpresas_Controller();
+            dgvEmpresas.DataSource = datosEmpresas;
         }
 
         private void btnConectar_Click(object sender, EventArgs e)
@@ -168,32 +169,6 @@ namespace LabCRUD
             else
             {
                 MessageBox.Show("Error al establecer conexión.");
-            }
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Esta seguro de eliminar a: " + txtNombres.Text + txtApellidos.Text + "?", "Confirmar eliminacion",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                EliminarDatos();
-                CargarGridDatos();
-            }
-        }
-
-        void EliminarDatos()
-        {
-            ControladorEmpleado.idempleado = Convert.ToInt16(txtID.Text);
-            bool respuesta = ControladorEmpleado.EliminarEmpleado_Controller();
-            if (respuesta == true)
-            {
-                MessageBox.Show("El registro ha sido eliminado correctamente", "Confirmacion",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("El registro no fue eliminado", "Confirmacion",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
