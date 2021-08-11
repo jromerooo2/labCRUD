@@ -16,5 +16,10 @@ namespace LabCRUD
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(39, 65, 86); //back color custom
+        }
     }
 }
