@@ -19,6 +19,8 @@ namespace LabCRUD
             InitializeComponent();
         }
 
+        public DataTable datosEmpresas;
+
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(39, 65, 86); //back color custom
@@ -38,6 +40,11 @@ namespace LabCRUD
         {
 
         }
+        void CargarGridDatos()
+        {
+            datosEmpresas = EmpleadosController.CargarEmpleados_Controller();
+            dgvEmpleados.DataSource = datosEmpresas;
+        }
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
@@ -51,6 +58,11 @@ namespace LabCRUD
             {
                 MessageBox.Show("Error al establecer conexión.");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
