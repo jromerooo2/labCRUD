@@ -233,6 +233,8 @@
             this.txtNit.Name = "txtNit";
             this.txtNit.Size = new System.Drawing.Size(151, 20);
             this.txtNit.TabIndex = 14;
+            this.txtNit.TextChanged += new System.EventHandler(this.txtNit_TextChanged);
+            this.txtNit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNit_KeyPress);
             // 
             // label6
             // 

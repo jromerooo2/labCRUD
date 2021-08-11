@@ -115,8 +115,20 @@ namespace LabCRUD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EnviarDatos();
-            CargarGridDatos();
+            if (string.IsNullOrWhiteSpace(txtRepresentante.Text.Trim()) ||
+                string.IsNullOrWhiteSpace(txtNombreEmpresa.Text.Trim()) ||
+                string.IsNullOrWhiteSpace(txtCorreo.Text.Trim()) ||
+                string.IsNullOrWhiteSpace(txtDireccion.Text.Trim()) ||
+                string.IsNullOrWhiteSpace(txtNit.Text.Trim()))
+            {
+                MessageBox.Show("Todos los campos son requeridos.", "Campos vacíos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                EnviarDatos();
+                CargarGridDatos();
+            }
         }
 
         void EnviarDatos()
@@ -250,6 +262,19 @@ namespace LabCRUD
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
