@@ -51,6 +51,18 @@ namespace Controlador
             return ModelEmpresa.AgregarEmpresa(nombreEmpresa, correoEmpresa, nit, nombreRepresentante, idTipoEmpresa, idEstadoEmpresa, direccionEmpresa);
         }
 
+        public static bool EliminarEmpresa_Controller()
+        {
+            return ModelEmpresa.EliminarEmpresa(idempresa);
+        }
+
+        public static bool ActualizarEmpresa_Controller()
+        {
+            return ModelEmpresa.ActualizarEmpresa(idempresa, nombreEmpresa, correoEmpresa, nit, nombreRepresentante, idTipoEmpresa, idEstadoEmpresa, direccionEmpresa);
+        }
+
         #endregion
+
+
     }
 }

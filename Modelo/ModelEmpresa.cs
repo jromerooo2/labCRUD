@@ -65,5 +65,38 @@ namespace Modelo
         }
 
         #endregion
+
+        public static bool EliminarEmpresa(int pid)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmddelete = new MySqlCommand(string.Format("DELETE FROM tbempresa WHERE id_empresa = '" + pid + "'"), ModeloConexion.ObtenerConexion());
+                retorno = Convert.ToBoolean(cmddelete.ExecuteNonQuery());
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
+
+        public static bool ActualizarEmpresa(int pid_empresa, string pempresa, string pcorreo, string pnit, string prepresentanteLegal, int pid_tipo_empresa, int pid_estado, string pdireccion)
+        {
+            bool retorno = false;
+            try
+            {
+                //Incersion de los datos
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tbempresa SET empresa = '" + pempresa + "', correo = '" + pcorreo + "', nit = '" + pnit + "', representante_legal = '" + prepresentanteLegal + "', id_tipo_empresa = '" + pid_tipo_empresa + "', id_estado = '" + pid_estado + "',  direccion = '" + pdireccion + "' WHERE id_empresa = '" + pid_empresa + "'"), ModeloConexion.ObtenerConexion());
+                //Verificacion de la incersion
+                retorno = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
+                //Retorno
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
     }
 }
