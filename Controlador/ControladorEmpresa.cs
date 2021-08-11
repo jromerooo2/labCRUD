@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Controlador
 {
-    class ControladorEmpresa
+    public class ControladorEmpresa
     {
         public static DataTable ObtenerEstadoEmpresa()
         {
