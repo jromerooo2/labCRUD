@@ -62,7 +62,15 @@ namespace LabCRUD
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string nombreEmpresa, nombreRepresentante, nit, correoContacto, direccionEmpresa;
+            int idTipoEmpresa, idEstadoEmpresa;
+            nombreEmpresa = txtNombreEmpresa.Text;
+            nit = txtNit.Text;
+            idTipoEmpresa = Convert.ToInt16(cmbTipoEmpresa.SelectedValue);
+            idEstadoEmpresa = Convert.ToInt16(cmbEstadoEmpresa.SelectedValue);
+            direccionEmpresa = txtDireccion.Text;
+            correoContacto = txtCorreo.Text;
+            nombreRepresentante = txtRepresentante.Text;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
