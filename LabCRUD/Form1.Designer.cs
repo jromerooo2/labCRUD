@@ -338,7 +338,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1574, 144);
+            this.pictureBox2.Location = new System.Drawing.Point(1568, 144);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 50);
@@ -422,6 +422,7 @@
             this.button3.TabIndex = 29;
             this.button3.Text = "Actualizar Datos";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // frmEmpresa
             // 

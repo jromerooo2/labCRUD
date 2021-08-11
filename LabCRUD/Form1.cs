@@ -115,11 +115,7 @@ namespace LabCRUD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtRepresentante.Text.Trim()) ||
-                string.IsNullOrWhiteSpace(txtNombreEmpresa.Text.Trim()) ||
-                string.IsNullOrWhiteSpace(txtCorreo.Text.Trim()) ||
-                string.IsNullOrWhiteSpace(txtDireccion.Text.Trim()) ||
-                string.IsNullOrWhiteSpace(txtNit.Text.Trim()))
+            if (Empty())
             {
                 MessageBox.Show("Todos los campos son requeridos.", "Campos vacíos",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -267,39 +263,78 @@ namespace LabCRUD
 
         void ActualizarDatos()
         {
-            try
+
+            //nombreO == arrayDatosNuevos[0] && correO == arrayDatosNuevos[1] && nitO == arrayDatosNuevos[2] 
+             //&& representanteO == arrayDatosNuevos[3] && direccionO == arrayDatosNuevos[4]
+
+            List<string> arrayDatosActu = new List<string>();
+            arrayDatosActu.Add(txtNombreEmpresa.Text);
+            arrayDatosActu.Add(txtCorreo.Text);
+            arrayDatosActu.Add(txtNit.Text);
+            arrayDatosActu.Add(txtRepresentante.Text);
+            arrayDatosActu.Add(txtDireccion.Text);
+
+            if (sameOrnot(arrayDatosActu) && !Empty())
             {
-                string nombreEmpresa, nombreRepresentante, nit, correoContacto, direccionEmpresa;
-                int idTipoEmpresa, idEstadoEmpresa, idempresa;
-                idempresa = Convert.ToInt16(txtId.Text);
-                nombreEmpresa = txtNombreEmpresa.Text;
-                nit = txtNit.Text;
-                idTipoEmpresa = Convert.ToInt16(cmbTipoEmpresa.SelectedValue);
-                idEstadoEmpresa = Convert.ToInt16(cmbEstadoEmpresa.SelectedValue);
-                direccionEmpresa = txtDireccion.Text;
-                correoContacto = txtCorreo.Text;
-                nombreRepresentante = txtRepresentante.Text;
-
-                empresa = new ControladorEmpresa(nombreEmpresa, nombreRepresentante, nit, direccionEmpresa, correoContacto, idTipoEmpresa, idEstadoEmpresa);
-                bool res = empresa.ActualizarEmpresa_Controller(idempresa);
-                if (res)
+                try
                 {
-                    MessageBox.Show("Empresa actualizada exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string nombreEmpresa, nombreRepresentante, nit, correoContacto, direccionEmpresa;
+                    int idTipoEmpresa, idEstadoEmpresa, idempresa;
+                    idempresa = Convert.ToInt16(txtId.Text);
+                    nombreEmpresa = txtNombreEmpresa.Text;
+                    nit = txtNit.Text;
+                    idTipoEmpresa = Convert.ToInt16(cmbTipoEmpresa.SelectedValue);
+                    idEstadoEmpresa = Convert.ToInt16(cmbEstadoEmpresa.SelectedValue);
+                    direccionEmpresa = txtDireccion.Text;
+                    correoContacto = txtCorreo.Text;
+                    nombreRepresentante = txtRepresentante.Text;
 
+                    empresa = new ControladorEmpresa(nombreEmpresa, nombreRepresentante, nit, direccionEmpresa, correoContacto, idTipoEmpresa, idEstadoEmpresa);
+                    bool res = empresa.ActualizarEmpresa_Controller(idempresa);
+                    if (res)
+                    {
+                        MessageBox.Show("Empresa actualizada exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Oops!, ocurrió un error al actualizar la empresa, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Oops!, ocurrió un error al actualizar la empresa, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
+                    MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }        
             }
-            catch
+            else
             {
-                MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Actualiza al menos uno de los datos para continuar, Por favor", "Advertencia");
             }
+
 
         }
 
+        private bool sameOrnot(List<string> arrayDatosNuevos)
+        {
+            int i = dgvEmpresas.CurrentRow.Index;
+
+            string nombreO = dgvEmpresas[1, i].Value.ToString();
+            string correO = dgvEmpresas[2, i].Value.ToString();
+            string nitO = dgvEmpresas[3, i].Value.ToString();
+            string representanteO = dgvEmpresas[4, i].Value.ToString();
+            string direccionO = dgvEmpresas[7, i].Value.ToString();
+
+            if (nombreO == arrayDatosNuevos[0] && correO == arrayDatosNuevos[1] && nitO == arrayDatosNuevos[2] 
+                && representanteO == arrayDatosNuevos[3] && direccionO == arrayDatosNuevos[4])
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
         private void txtNit_TextChanged(object sender, EventArgs e)
         {
@@ -316,6 +351,36 @@ namespace LabCRUD
 
         private void button3_Click(object sender, EventArgs e)
         {
+            CargarGridDatos();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private bool Empty()
+        {
+            string nombres, representante, correo, direccion, nit;
+            int estado, tipo;
+            nit = txtNit.Text;
+            direccion = txtCorreo.Text;
+            correo = txtCorreo.Text;
+            nombres = txtNombreEmpresa.Text;
+            representante = txtRepresentante.Text;
+            tipo = Convert.ToInt16(cmbTipoEmpresa.SelectedValue);
+            estado = Convert.ToInt16(cmbEstadoEmpresa.SelectedValue);
+
+            if (!String.IsNullOrEmpty(nombres) && !String.IsNullOrEmpty(representante) && !String.IsNullOrEmpty(Convert.ToString(estado))
+                &&!String.IsNullOrEmpty(Convert.ToString(tipo)) && !String.IsNullOrEmpty(correo) && !String.IsNullOrEmpty(direccion)
+                && !String.IsNullOrEmpty(nit))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
 
         }
     }
