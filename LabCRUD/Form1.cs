@@ -17,6 +17,7 @@ namespace LabCRUD
         public frmEmpresa()
         {
             InitializeComponent();
+            CargarDatos();
         }
 
         public DataTable datosEmpresas;
@@ -25,6 +26,7 @@ namespace LabCRUD
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(39, 65, 86); //back color custom
+            CargarDatos();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -41,6 +43,55 @@ namespace LabCRUD
         {
 
         }
+
+        void CargarDatos()
+        {
+            try
+            {
+                CargarEstadoEmpresa();
+                CargarTipoEmpresa();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar datos.", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //Cargar ComboBox
+        void CargarTipoEmpresa()
+        {
+            try
+            {
+                DataTable dataTipo = ControladorEmpresa.ObtenerTipoEmpresa();
+                cmbTipoEmpresa.DataSource = dataTipo;
+                cmbTipoEmpresa.DisplayMember = "tipo_empresa";
+                cmbTipoEmpresa.ValueMember = "id_tipo_empresa";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los tipos de empresa .", "Error de carga",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+            }
+        }
+
+        void CargarEstadoEmpresa()
+        {
+            try
+            {
+                DataTable dataEstado = ControladorEmpresa.ObtenerEstadoEmpresa();
+                cmbEstadoEmpresa.DataSource = dataEstado;
+                cmbEstadoEmpresa.DisplayMember = "estado";
+                cmbEstadoEmpresa.ValueMember = "id_estado";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los estados .", "Error de carga",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+            }
+        }
+
         void CargarGridDatos()
         {
             //datosEmpresas = EmpleadosController.CargarEmpleados_Controller();
@@ -104,6 +155,20 @@ namespace LabCRUD
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConectar_Click_1(object sender, EventArgs e)
+        {
+            MySqlConnection objvalor;
+            objvalor = ControladorConexion.Conexion();
+            if (objvalor != null)
+            {
+                MessageBox.Show("Conexión se estableció con exito.");
+            }
+            else
+            {
+                MessageBox.Show("Error al establecer conexión.");
+            }
         }
     }
 }

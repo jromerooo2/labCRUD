@@ -15,7 +15,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tbempresa";
+                string instruccion = "SELECT * FROM tbtipo_empresa";
                 MySqlCommand cmdTipoEmpresa = new MySqlCommand(string.Format(instruccion), ModeloConexion.ObtenerConexion());
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdTipoEmpresa);
                 data = new DataTable();
