@@ -42,8 +42,8 @@ namespace LabCRUD
         }
         void CargarGridDatos()
         {
-            datosEmpresas = EmpleadosController.CargarEmpleados_Controller();
-            dgvEmpleados.DataSource = datosEmpresas;
+            //datosEmpresas = EmpleadosController.CargarEmpleados_Controller();
+            //dgvEmpleados.DataSource = datosEmpresas;
         }
 
         private void btnConectar_Click(object sender, EventArgs e)
@@ -61,6 +61,11 @@ namespace LabCRUD
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
