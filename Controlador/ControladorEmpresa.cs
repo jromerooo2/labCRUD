@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Controlador
 {
-    class ControladorEmpresa
+    public class ControladorEmpresa
     {
         public static DataTable ObtenerEstadoEmpresa()
         {
@@ -55,7 +55,7 @@ namespace Controlador
 
         public static bool EliminarEmpresa_Controller()
         {
-            return ModelEmpresa.EliminarEmpresa(id);
+            return ModelEmpresa.EliminarEmpresa(idempresa);
         }
     }
 }
