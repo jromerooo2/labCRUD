@@ -12,12 +12,12 @@ namespace Controlador
     {
         public static DataTable ObtenerEstadoEmpresa()
         {
-            return Modelo.CargarEstadoEmpresa();
+            return ModelEmpresa.CargarEstadoEmpresa();
         }
 
         public static DataTable ObtenerTipoEmpresa()
         {
-            return Modelo.CargarTipoEmpresa();
+            return ModelEmpresa.CargarTipoEmpresa();
         }
     }
 }
