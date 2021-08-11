@@ -33,7 +33,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tbestado WHERE estado = ?param1";
+                string instruccion = "SELECT * FROM tbestado WHERE id_estado = ?param1";
                 MySqlCommand cmdtipodoc = new MySqlCommand(string.Format(instruccion), ModeloConexion.ObtenerConexion());
                 cmdtipodoc.Parameters.Add(new MySqlParameter("param1", id));
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipodoc);
@@ -52,7 +52,7 @@ namespace Modelo
             DataTable data;
             try
             {
-                string instruccion = "SELECT * FROM tbtipo_empresa WHERE tipo_empresa = ?param1";
+                string instruccion = "SELECT * FROM tbtipo_empresa WHERE id_tipo_empresa = ?param1";
                 MySqlCommand cmdtipodoc = new MySqlCommand(string.Format(instruccion), ModeloConexion.ObtenerConexion());
                 cmdtipodoc.Parameters.Add(new MySqlParameter("param1", id));
                 MySqlDataAdapter adp = new MySqlDataAdapter(cmdtipodoc);

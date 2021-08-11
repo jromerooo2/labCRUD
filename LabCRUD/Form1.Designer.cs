@@ -142,7 +142,6 @@
             this.cmbEstadoEmpresa.Name = "cmbEstadoEmpresa";
             this.cmbEstadoEmpresa.Size = new System.Drawing.Size(193, 24);
             this.cmbEstadoEmpresa.TabIndex = 23;
-            this.cmbEstadoEmpresa.SelectedIndexChanged += new System.EventHandler(this.cmbEstadoEmpresa_SelectedIndexChanged);
             this.cmbEstadoEmpresa.Click += new System.EventHandler(this.cmbEstadoEmpresa_Click);
             // 
             // label10
@@ -164,7 +163,6 @@
             this.cmbTipoEmpresa.Name = "cmbTipoEmpresa";
             this.cmbTipoEmpresa.Size = new System.Drawing.Size(193, 24);
             this.cmbTipoEmpresa.TabIndex = 21;
-            this.cmbTipoEmpresa.SelectedIndexChanged += new System.EventHandler(this.cmbTipoEmpresa_SelectedIndexChanged);
             this.cmbTipoEmpresa.Click += new System.EventHandler(this.cmbTipoEmpresa_Click);
             // 
             // label8

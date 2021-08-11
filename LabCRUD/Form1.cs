@@ -220,17 +220,6 @@ namespace LabCRUD
             cmbEstadoEmpresa.DisplayMember = "estado";
             cmbEstadoEmpresa.ValueMember = "id_estado";
         }
-
-        private void cmbTipoEmpresa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CargarTipoEmpresa();
-        }
-
-        private void cmbEstadoEmpresa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CargarEstadoEmpresa();
-        }
-
         private void cmbTipoEmpresa_Click(object sender, EventArgs e)
         {
             CargarTipoEmpresa();
