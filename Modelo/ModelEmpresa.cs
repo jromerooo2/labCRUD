@@ -143,7 +143,7 @@ namespace Modelo
             try
             {
                 //Incersion de los datos
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tbempresa SET empresa = '" + pempresa + "', correo = '" + pcorreo + "', nit = '" + pnit + "', representante_legal = '" + prepresentanteLegal + "', id_tipo_empresa = '" + pid_tipo_empresa + "', id_estado = '" + pid_estado + "',  direccion = '" + pdireccion + "' WHERE id_empresa = '" + pid_empresa + "'"), ModeloConexion.ObtenerConexion());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tbempresa SET empresa = '" + pempresa + "', correo = '" + pcorreo + "', nit = '" + pnit + "', representante_legal = '" + prepresentanteLegal + "', id_tipo_empresa = '" + pid_tipo_empresa + "', id_estado = '" + pid_estado + "',  direccion = '" + pdireccion + "' WHERE id_empresa = '" + pid_empresa + "' "), ModeloConexion.ObtenerConexion());
                 //Verificacion de la incersion
                 retorno = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 //Retorno

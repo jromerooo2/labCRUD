@@ -26,7 +26,7 @@ namespace LabCRUD
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(39, 65, 86); //back color custom
+            this.BackColor = Color.FromArgb(28, 110, 140); //back color custom
             CargarDatos();
         }
 
@@ -261,8 +261,45 @@ namespace LabCRUD
 
         private void button4_Click(object sender, EventArgs e)
         {
+            ActualizarDatos();
+            CargarGridDatos();
+        }
+
+        void ActualizarDatos()
+        {
+            try
+            {
+                string nombreEmpresa, nombreRepresentante, nit, correoContacto, direccionEmpresa;
+                int idTipoEmpresa, idEstadoEmpresa, idempresa;
+                idempresa = Convert.ToInt16(txtId.Text);
+                nombreEmpresa = txtNombreEmpresa.Text;
+                nit = txtNit.Text;
+                idTipoEmpresa = Convert.ToInt16(cmbTipoEmpresa.SelectedValue);
+                idEstadoEmpresa = Convert.ToInt16(cmbEstadoEmpresa.SelectedValue);
+                direccionEmpresa = txtDireccion.Text;
+                correoContacto = txtCorreo.Text;
+                nombreRepresentante = txtRepresentante.Text;
+
+                empresa = new ControladorEmpresa(nombreEmpresa, nombreRepresentante, nit, direccionEmpresa, correoContacto, idTipoEmpresa, idEstadoEmpresa);
+                bool res = empresa.ActualizarEmpresa_Controller(idempresa);
+                if (res)
+                {
+                    MessageBox.Show("Empresa actualizada exitosamente", "Confirmación de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Oops!, ocurrió un error al actualizar la empresa, consulte con el administrador del sistema.", "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error crítico.", "Errr C001", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
+
 
         private void txtNit_TextChanged(object sender, EventArgs e)
         {
@@ -275,6 +312,11 @@ namespace LabCRUD
             {
                 e.Handled = true;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

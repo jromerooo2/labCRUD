@@ -71,10 +71,11 @@ namespace Controlador
             return ModelEmpresa.EliminarEmpresa(idempresa);
         }
 
-        public static bool ActualizarEmpresa_Controller()
+        public  bool ActualizarEmpresa_Controller(int idQueVieneDeVista)
         {
-            return ModelEmpresa.ActualizarEmpresa(idempresa, nombreEmpresa, correoEmpresa, nit, nombreRepresentante, idTipoEmpresa, idEstadoEmpresa, direccionEmpresa);
+            return ModelEmpresa.ActualizarEmpresa(idQueVieneDeVista, nombreEmpresa, correoEmpresa, nit, nombreRepresentante, idTipoEmpresa, idEstadoEmpresa, direccionEmpresa);
         }
+
 
         #endregion
 
