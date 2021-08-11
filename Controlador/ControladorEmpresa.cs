@@ -52,5 +52,10 @@ namespace Controlador
         }
 
         #endregion
+
+        public static bool EliminarEmpresa_Controller()
+        {
+            return ModelEmpresa.EliminarEmpresa(id);
+        }
     }
 }

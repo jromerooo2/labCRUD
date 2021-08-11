@@ -65,5 +65,20 @@ namespace Modelo
         }
 
         #endregion
+
+        public static bool EliminarEmpresa(int pid)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmddelete = new MySqlCommand(string.Format("DELETE FROM tbempresa WHERE id_empresa = '" + pid + "'"), ModeloConexion.ObtenerConexion());
+                retorno = Convert.ToBoolean(cmddelete.ExecuteNonQuery());
+                return retorno;
+            }
+            catch (Exception)
+            {
+                return retorno;
+            }
+        }
     }
 }

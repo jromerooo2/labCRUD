@@ -54,6 +54,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnConectar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -342,14 +343,27 @@
             this.btnConectar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
             this.btnConectar.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConectar.ForeColor = System.Drawing.Color.White;
-            this.btnConectar.Location = new System.Drawing.Point(849, 125);
+            this.btnConectar.Location = new System.Drawing.Point(9, 10);
             this.btnConectar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(106, 39);
             this.btnConectar.TabIndex = 24;
-            this.btnConectar.Text = "Agregar";
+            this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = false;
             this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click_1);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(868, 115);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(106, 48);
+            this.btnEliminar.TabIndex = 25;
+            this.btnEliminar.Text = "Eliminar Empresa";
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // frmEmpresa
             // 
@@ -357,6 +371,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(65)))), ((int)(((byte)(86)))));
             this.ClientSize = new System.Drawing.Size(985, 414);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label11);
@@ -407,6 +422,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
 
