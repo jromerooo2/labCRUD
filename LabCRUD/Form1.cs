@@ -244,8 +244,12 @@ namespace LabCRUD
             txtRepresentante.Clear();
             cmbEstadoEmpresa.SelectedIndex = 0;
             cmbTipoEmpresa.SelectedIndex = 0;
-            textBox2.Clear();
-            
+            textBox2.Clear();         
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
