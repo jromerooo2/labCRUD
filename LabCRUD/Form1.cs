@@ -171,5 +171,41 @@ namespace LabCRUD
                 MessageBox.Show("Error al establecer conexión.");
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro de eliminar a: " + txtNombreEmpresa.Text + "?", "Confirmar eliminacion",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EliminarDatos();
+                CargarGridDatos();
+            }
+        }
+
+        void EliminarDatos()
+        {
+            ControladorEmpresa.idempresa = Convert.ToInt16(txtId.Text);
+            bool respuesta = ControladorEmpresa.EliminarEmpresa_Controller();
+            if (respuesta == true)
+            {
+                MessageBox.Show("El registro ha sido eliminado correctamente", "Confirmacion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("El registro no fue eliminado", "Confirmacion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvEmpresas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dgvEmpresas.CurrentRow.Index;
+
+            txtId.Text = dgvEmpresas[0, i].Value.ToString();
+            txtNombreEmpresa.Text = dgvEmpresas[1, i].Value.ToString();
+            txtCorreo.Text = dgvEmpresas[2, i].Value.ToString();
+
+        }
     }
 }
