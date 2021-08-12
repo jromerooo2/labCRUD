@@ -280,10 +280,12 @@ namespace LabCRUD
             arrayDatosActu.Add(txtNit.Text);
             arrayDatosActu.Add(txtRepresentante.Text);
             arrayDatosActu.Add(txtDireccion.Text);
-            arrayDatosActu.Add(cmbEstadoEmpresa.SelectedValue.ToString());
-            arrayDatosActu.Add(cmbTipoEmpresa.SelectedValue.ToString());
 
-            if (sameOrnot(arrayDatosActu) && !Empty())
+            int idEstado = Convert.ToInt16(cmbEstadoEmpresa.SelectedValue);
+            int idTipo = Convert.ToInt16(cmbTipoEmpresa.SelectedValue);
+            
+
+            if (sameOrnot(arrayDatosActu, idEstado, idTipo) && !Empty())
             {
                 try
                 {
@@ -324,10 +326,12 @@ namespace LabCRUD
 
         }
 
-        private bool sameOrnot(List<string> arrayDatosNuevos)
+        private bool sameOrnot(List<string> arrayDatosNuevos, int idEstado, int idTipo)
         {
             int i = dgvEmpresas.CurrentRow.Index;
-
+ 
+            int estadoempresa0 = Convert.ToInt16(dgvEmpresas[5, i].Value);
+            int tipoempresa0 = Convert.ToInt16(dgvEmpresas[6, i].Value);
             string nombreO = dgvEmpresas[1, i].Value.ToString();
             string correO = dgvEmpresas[2, i].Value.ToString();
             string nitO = dgvEmpresas[3, i].Value.ToString();
@@ -335,7 +339,7 @@ namespace LabCRUD
             string direccionO = dgvEmpresas[7, i].Value.ToString();
 
             if (nombreO == arrayDatosNuevos[0] && correO == arrayDatosNuevos[1] && nitO == arrayDatosNuevos[2] 
-                && representanteO == arrayDatosNuevos[3] && direccionO == arrayDatosNuevos[4])
+                && representanteO == arrayDatosNuevos[3] && direccionO == arrayDatosNuevos[4] && estadoempresa0 == idEstado && tipoempresa0 == idTipo)
             {
                 return false;
             }
