@@ -69,7 +69,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 25.2F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(573, 27);
+            this.label1.Location = new System.Drawing.Point(598, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(453, 49);
             this.label1.TabIndex = 0;
@@ -420,7 +420,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1045, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(1110, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(84, 75);
