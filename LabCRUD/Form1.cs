@@ -266,6 +266,7 @@ namespace LabCRUD
         {
             ActualizarDatos();
             CargarGridDatos();
+            LimpiarCampos();
         }
 
         void ActualizarDatos()
