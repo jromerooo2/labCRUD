@@ -28,6 +28,8 @@ namespace LabCRUD
         {
             this.BackColor = Color.FromArgb(28, 110, 140); //back color custom
             CargarDatos();
+            btnEliminar.Enabled = false;
+            btnActualizar.Enabled = false;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -124,6 +126,7 @@ namespace LabCRUD
             {
                 EnviarDatos();
                 CargarGridDatos();
+                LimpiarCampos();
             }
         }
 
@@ -173,7 +176,7 @@ namespace LabCRUD
             objvalor = ControladorConexion.Conexion();
             if (objvalor != null)
             {
-                MessageBox.Show("Conexión se estableció con exito.");
+                MessageBox.Show("Conexión se estableció con exito.","Confirmación de conexion",MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -209,6 +212,10 @@ namespace LabCRUD
 
         private void dgvEmpresas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnAgregar.Enabled = false;
+            btnEliminar.Enabled = true;
+            btnActualizar.Enabled = true;
+
             int i = dgvEmpresas.CurrentRow.Index;
 
             txtId.Text = dgvEmpresas[0, i].Value.ToString();
@@ -273,6 +280,8 @@ namespace LabCRUD
             arrayDatosActu.Add(txtNit.Text);
             arrayDatosActu.Add(txtRepresentante.Text);
             arrayDatosActu.Add(txtDireccion.Text);
+            arrayDatosActu.Add(cmbEstadoEmpresa.SelectedValue.ToString());
+            arrayDatosActu.Add(cmbTipoEmpresa.SelectedValue.ToString());
 
             if (sameOrnot(arrayDatosActu) && !Empty())
             {
@@ -382,6 +391,10 @@ namespace LabCRUD
                 return true;
             }
 
+        }
+
+        private void button4_EnabledChanged(object sender, EventArgs e)
+        {
         }
     }
 }
