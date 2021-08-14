@@ -401,5 +401,10 @@ namespace LabCRUD
         private void button4_EnabledChanged(object sender, EventArgs e)
         {
         }
+
+        private void dgvEmpresas_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

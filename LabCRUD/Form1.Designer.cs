@@ -98,8 +98,13 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtNombreEmpresa);
             this.panel1.Controls.Add(this.label2);
+<<<<<<< Updated upstream
             this.panel1.Location = new System.Drawing.Point(12, 92);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.panel1.Location = new System.Drawing.Point(9, 75);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(449, 395);
             this.panel1.TabIndex = 3;
@@ -108,17 +113,28 @@
             // txtId
             // 
             this.txtId.Enabled = false;
+<<<<<<< Updated upstream
             this.txtId.Location = new System.Drawing.Point(344, 18);
             this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.txtId.Location = new System.Drawing.Point(258, 15);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(87, 22);
             this.txtId.TabIndex = 25;
             // 
             // txtDireccion
             // 
+<<<<<<< Updated upstream
             this.txtDireccion.Location = new System.Drawing.Point(13, 271);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccion.MaximumSize = new System.Drawing.Size(200, 200);
+=======
+            this.txtDireccion.Location = new System.Drawing.Point(10, 220);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDireccion.MaximumSize = new System.Drawing.Size(151, 163);
+>>>>>>> Stashed changes
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(197, 102);
@@ -139,8 +155,13 @@
             // cmbEstadoEmpresa
             // 
             this.cmbEstadoEmpresa.FormattingEnabled = true;
+<<<<<<< Updated upstream
             this.cmbEstadoEmpresa.Location = new System.Drawing.Point(237, 271);
             this.cmbEstadoEmpresa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.cmbEstadoEmpresa.Location = new System.Drawing.Point(178, 220);
+            this.cmbEstadoEmpresa.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.cmbEstadoEmpresa.Name = "cmbEstadoEmpresa";
             this.cmbEstadoEmpresa.Size = new System.Drawing.Size(193, 24);
             this.cmbEstadoEmpresa.TabIndex = 23;
@@ -160,8 +181,13 @@
             // cmbTipoEmpresa
             // 
             this.cmbTipoEmpresa.FormattingEnabled = true;
+<<<<<<< Updated upstream
             this.cmbTipoEmpresa.Location = new System.Drawing.Point(237, 145);
             this.cmbTipoEmpresa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.cmbTipoEmpresa.Location = new System.Drawing.Point(178, 118);
+            this.cmbTipoEmpresa.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.cmbTipoEmpresa.Name = "cmbTipoEmpresa";
             this.cmbTipoEmpresa.Size = new System.Drawing.Size(193, 24);
             this.cmbTipoEmpresa.TabIndex = 21;
@@ -184,8 +210,13 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.btnAgregar.Location = new System.Drawing.Point(260, 306);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.btnAgregar.Location = new System.Drawing.Point(195, 249);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 68);
             this.btnAgregar.TabIndex = 4;
@@ -195,8 +226,13 @@
             // 
             // textBox2
             // 
+<<<<<<< Updated upstream
             this.textBox2.Location = new System.Drawing.Point(232, 210);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.textBox2.Location = new System.Drawing.Point(174, 171);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(200, 22);
@@ -216,8 +252,13 @@
             // 
             // txtNit
             // 
+<<<<<<< Updated upstream
             this.txtNit.Location = new System.Drawing.Point(11, 210);
             this.txtNit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.txtNit.Location = new System.Drawing.Point(8, 171);
+            this.txtNit.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.txtNit.Name = "txtNit";
             this.txtNit.Size = new System.Drawing.Size(200, 22);
             this.txtNit.TabIndex = 14;
@@ -248,8 +289,13 @@
             // 
             // txtRepresentante
             // 
+<<<<<<< Updated upstream
             this.txtRepresentante.Location = new System.Drawing.Point(11, 145);
             this.txtRepresentante.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.txtRepresentante.Location = new System.Drawing.Point(8, 118);
+            this.txtRepresentante.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.txtRepresentante.Name = "txtRepresentante";
             this.txtRepresentante.Size = new System.Drawing.Size(200, 22);
             this.txtRepresentante.TabIndex = 10;
@@ -268,8 +314,13 @@
             // 
             // txtCorreo
             // 
+<<<<<<< Updated upstream
             this.txtCorreo.Location = new System.Drawing.Point(237, 84);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.txtCorreo.Location = new System.Drawing.Point(178, 68);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(200, 22);
             this.txtCorreo.TabIndex = 8;
@@ -287,8 +338,13 @@
             // 
             // txtNombreEmpresa
             // 
+<<<<<<< Updated upstream
             this.txtNombreEmpresa.Location = new System.Drawing.Point(7, 84);
             this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.txtNombreEmpresa.Location = new System.Drawing.Point(5, 68);
+            this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.txtNombreEmpresa.Name = "txtNombreEmpresa";
             this.txtNombreEmpresa.Size = new System.Drawing.Size(200, 22);
             this.txtNombreEmpresa.TabIndex = 6;
@@ -308,6 +364,7 @@
             // dgvEmpresas
             // 
             this.dgvEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< Updated upstream
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -319,12 +376,26 @@
             this.dgvEmpresas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmpresas.Location = new System.Drawing.Point(475, 213);
             this.dgvEmpresas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(110)))), ((int)(((byte)(140)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpresas.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmpresas.Location = new System.Drawing.Point(356, 173);
+            this.dgvEmpresas.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.dgvEmpresas.Name = "dgvEmpresas";
             this.dgvEmpresas.RowTemplate.Height = 24;
             this.dgvEmpresas.Size = new System.Drawing.Size(1187, 274);
             this.dgvEmpresas.TabIndex = 4;
             this.dgvEmpresas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresas_CellClick);
             this.dgvEmpresas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvEmpresas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEmpresas_MouseClick);
             // 
             // label11
             // 
@@ -343,8 +414,13 @@
             this.btnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConectar.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConectar.ForeColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.btnConectar.Location = new System.Drawing.Point(12, 12);
             this.btnConectar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.btnConectar.Location = new System.Drawing.Point(9, 10);
+            this.btnConectar.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(141, 48);
             this.btnConectar.TabIndex = 24;
@@ -359,8 +435,13 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.btnEliminar.Location = new System.Drawing.Point(1516, 134);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.btnEliminar.Location = new System.Drawing.Point(1137, 109);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(141, 59);
             this.btnEliminar.TabIndex = 25;
@@ -375,8 +456,13 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.button2.Location = new System.Drawing.Point(1341, 53);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.button2.Location = new System.Drawing.Point(1006, 43);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 59);
             this.button2.TabIndex = 26;
@@ -391,8 +477,13 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.btnActualizar.Location = new System.Drawing.Point(1516, 53);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.btnActualizar.Location = new System.Drawing.Point(1137, 43);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(141, 59);
             this.btnActualizar.TabIndex = 28;
@@ -408,8 +499,13 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.button3.Location = new System.Drawing.Point(1341, 134);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.button3.Location = new System.Drawing.Point(1006, 109);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(141, 59);
             this.button3.TabIndex = 29;
@@ -445,7 +541,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+<<<<<<< Updated upstream
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> Stashed changes
             this.Name = "frmEmpresa";
             this.Text = "Control Empresas";
             this.Load += new System.EventHandler(this.Form1_Load);
